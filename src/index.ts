@@ -37,9 +37,9 @@ const cosineSimilarity = (a:any, b:any) => {
     return dotProduct / (normA * normB);
 };
 
-app.get('/signin', (req, res) => {
+app.get('*', (req, res) => {
   // Redirect to the frontend URL for the Signin page
-  res.redirect('https://subconcious.vercel.app/signin');
+  res.send('hello');
 });
 
 // @ts-ignore
