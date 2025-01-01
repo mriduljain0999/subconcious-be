@@ -1,9 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import * as dotenv from 'dotenv'
 
-dotenv.config();
-const secret = process.env.JWT_SECRET;
+const secret = "halleluiyaUser";
 
 enum ResponseStatus {
     Success = 200,
