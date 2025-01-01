@@ -37,6 +37,10 @@ const cosineSimilarity = (a:any, b:any) => {
     return dotProduct / (normA * normB);
 };
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // @ts-ignore
 app.post('/api/v1/embed', async (req:Request, res:Response) => {
     try {
@@ -79,10 +83,6 @@ app.post('/api/v1/embed', async (req:Request, res:Response) => {
         }
     }
 });
-
-app.get('/',function(req,res){
-    res.send("hello")
-})
 
 app.post('/api/v1/signup', async function(req, res) {
     try {
