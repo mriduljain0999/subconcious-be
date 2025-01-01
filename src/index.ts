@@ -37,7 +37,7 @@ const cosineSimilarity = (a:any, b:any) => {
     return dotProduct / (normA * normB);
 };
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   // Redirect to the frontend URL for the Signin page
   res.send('hello');
 });
