@@ -182,7 +182,7 @@ app.post('/api/v1/content',authMiddleware, async function(req:AuthenticationRequ
 
 });
 
-app.get('/api/v1/content',authMiddleware,async function(req:AuthenticationRequest,res){
+app.get('/api/v1/content',async function(req:AuthenticationRequest,res){
     const content = await ContentModel.find({
         userId:req.userId
     }).populate({
