@@ -1,4 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
+import path from 'path';
+
 import mongoose from 'mongoose';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
